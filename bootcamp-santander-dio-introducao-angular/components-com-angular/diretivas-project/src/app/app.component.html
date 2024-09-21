@@ -1,0 +1,14 @@
+
+<app-comp-atributos>
+    <h2>FALA COMIGO</h2>
+    <p>EU VIM DE FORA</p>
+</app-comp-atributos>
+<app-card *ngIf=" isVisible; else anotherBlock"></app-card> <!-- Posso usar o ngIf dentro da tag 'principal' quando quero definir o quando mostrar ou não o componente inteiro -->
+<!-- quando usamos o ng-template e colocamos dentro do ngIf, quando verdadeiro, mostra a tag e quando false ele mostra a tag ng-template-->
+<ng-template #anotherBlock>
+    <p>
+        Bloco secreto
+    </p>
+</ng-template>
+
+<router-outlet></router-outlet>

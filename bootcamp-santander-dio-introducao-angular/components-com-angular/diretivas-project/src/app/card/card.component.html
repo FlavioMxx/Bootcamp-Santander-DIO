@@ -1,0 +1,36 @@
+<h1>Meu aplicativo</h1>
+<p *ngIf="true">card works!</p> <!-- *ngIf="true" por padrão, resume sua funcionalidade em mostrar(true) ou não o conteúdo/tag-->
+<button > Clique aqui </button>
+
+    <ul>
+        <li *ngFor="let p of produtos; let i=index" (click)="remover(i)"> <!-- ngFor é um for... deeer, mas funciona assim, para cada 'produtos' (um atributo dentro da classe do meu component) renderize um p com o produto dentro-->
+            {{ i }} - {{ p }}
+        </li>
+        <button (click)="adicionar()"> Adicionar </button>
+    </ul>
+
+
+
+<div [ngSwitch]="menuType"> <!-- ngSwitch vai renderizar apenas o componente que estiver de acordo com a variavel definida nele, aqui por ex: menuType-->
+    <div *ngSwitchDefault>
+        <ul>
+            <li>editar perfil</li>
+            <li>adicionar cartão</li>
+        </ul>
+    </div>  
+    <div *ngSwitchCase=" 'admin' ">
+        <ul>
+            <li>editar perfil</li>
+            <li>adicionar cartão</li>
+            <li>gerenciar usuários</li>
+        </ul>
+    </div>  
+    <div *ngSwitchCase=" 'superUser' ">
+        <ul>
+            <li>editar perfil</li>
+            <li>adicionar cartão</li>
+            <li>gerenciar usuários</li>
+            <li>gerenciar admins</li>
+        </ul>
+    </div>  
+</div>  

@@ -1,0 +1,31 @@
+<p [ngClass]="estilo">comp-atributos works!</p> <!-- ngClass me ajuda a mudar dinamicamente a classe da tag-->
+<button (click)="trocar()"> Clique ai </button>
+<h1 [ngStyle]="{ 'background':corFundo, 'color': corFonte}">CURSO ANGULAR</h1> <!-- ngStyle funciona como o css inline e também posso passar dinamicamente -->
+
+
+<ng-content select="h2"></ng-content> <!-- Pega elementos do meu componente pai e renderiza-->
+
+<h1>Lista de compras</h1>
+<p>Adicione um item</p>
+<input type="text" [(ngModel)]="item"> <!-- ngModel conversa bidirecirecionalmente -->
+<button (click)="adicionarNaLista()">ADICIONA ITEM</button>
+<p> {{ item }} </p>
+
+<ng-content select="p"></ng-content> <!-- Pega elementos do meu componente pai e renderiza-->
+
+<ol>
+    <li *ngFor="let produto of lista">
+        {{ produto }}
+    </li>
+</ol>
+
+<hr>
+
+<ng-template [ngIf]="isEnableLink"> <!-- tag especial que só é mostrada quando for habilitado, usamos o ngIf para manipular seu estado, o default é false-->
+    <a href="#">FINALIZAR COMPRA</a>
+</ng-template>
+<br>
+<ng-template [ngIf]="isEnableLink"> 
+    <a href="#">ADICIONAR AO CARRINHO</a>
+</ng-template>
+<hr>

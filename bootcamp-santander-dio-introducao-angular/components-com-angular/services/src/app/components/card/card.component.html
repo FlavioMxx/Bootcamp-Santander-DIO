@@ -1,0 +1,20 @@
+
+<div class="container__pokemon">
+
+    <input class="container__input" type="text" (keyup.enter)="getPokemon($any($event.target).value)">
+
+
+    <div class="container__name">
+        <h3> {{ pokemon.name }} </h3>
+    </div>
+
+    <div class="container__photo">
+        <img [src]="pokemon.sprites.front_default" alt="container__photo">
+    </div>
+
+    <div class="container__type">
+        <span [ngClass]="type.type.name" *ngFor="let type of pokemon.types" class="type">
+            {{ type.type.name }}
+        </span>
+    </div>
+</div>

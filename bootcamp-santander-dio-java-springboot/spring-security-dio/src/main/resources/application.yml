@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-security-dio
+
+  security:
+    user:
+      name: flavio.milani
+      password: senha123
+      roles: USERS
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

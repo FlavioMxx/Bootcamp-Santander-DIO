@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: primeira-api-web-dio
+
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui/index.html
+    url: /v3/api-docs
+  packages-to-scan:
+    - br.edu.flaviomxx.primeira_web_api_dio.controller

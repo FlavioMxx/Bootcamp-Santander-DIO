@@ -1,0 +1,35 @@
+<div>
+  <ul>
+    <!--href recarrega a aplicação sempre que clicado, o que é ruim para o SPA, onde deveria ter apenas uma page e tudo ser dinamico -->
+    <!-- por isso usamos o router link no lugar -->
+
+    <!-- routerLinkActive define uma classe quando a rota está ativa -->
+    <!-- routerLinkActiveOptions define algumas opções da classe, como por exemplo se a rota tem que ser exatamente a do router link ou apenas conter aquilo -->
+    <li>
+      <a
+        [routerLink]="['/']"
+        [routerLinkActive]="['selected']"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        HOME
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="['/portifolio']"
+        [routerLinkActive]="['selected']"
+      >
+        PORTIFOLIO
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]=""
+        [routerLinkActive]="['selected']"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        TESTE
+      </a>
+    </li>
+  </ul>
+</div>

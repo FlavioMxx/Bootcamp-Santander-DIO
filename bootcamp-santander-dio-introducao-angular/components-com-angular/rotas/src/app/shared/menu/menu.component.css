@@ -1,0 +1,10 @@
+* {
+    text-decoration: none;
+    color: black;
+}
+
+.selected {
+    color: blueviolet;
+    font-weight: bolder;
+    text-decoration: underline;
+}

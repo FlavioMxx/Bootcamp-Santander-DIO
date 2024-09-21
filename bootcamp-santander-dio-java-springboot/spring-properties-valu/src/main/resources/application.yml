@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-properties-value
+
+remetente:
+  nome: Flavio Milani
+  email: flavio-dev@email.com
+  telefones: 11987654321, 11912345678
